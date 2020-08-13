@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+        body{
+            margin: 10px;
+        } 
+        #rcorners1 {
+          border-radius: 25px;
+          background: #d8e434;
+          padding: 20px; 
+          width: 200px;
+          height: 150px;  
+        }
+        
+        #rcorners2 {
+          border-radius: 25px;
+          border: 2px solid #adcc81;
+          padding: 20px; 
+          width: 200px;
+          height: 150px;  
+        }
+        #rcorners3 {
+        border-radius: 15px 50px 30px 5px;
+        background: #ec3939;
+        padding: 20px; 
+        width: 200px;
+        height: 150px; 
+        }
+
+        #rcorners4 {
+        border-radius: 15px 50px 30px;
+        background: #ff933b;
+        padding: 20px; 
+        width: 200px;
+        height: 150px; 
+        }
+
+        #rcorners5 {
+        border-radius: 15px 50px;
+        background: powderblue;
+        padding: 20px; 
+        width: 200px;
+        height: 150px; 
+        } 
+
+        #rcorners6 {
+        border-radius: 15px;
+        background: #a730ec;
+        padding: 20px; 
+        width: 200px;
+        height: 150px; 
+        }
+        #borderimg { 
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(https://www.w3schools.com/css/border.png) 30 round;
+        }        
+        #borderimg2 {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(https://www.w3schools.com/css/border.png) 30 stretch;
+        }
+                .div1 {
+        border: 1px solid black;
+        height: 120px;
+        width: 150px;
+        background: url(https://www.w3schools.com/css/img_flwr.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        }
+
+        .div2 {
+        border: 1px solid black;
+        height: 120px;
+        width: 150px;
+        background: url(https://www.w3schools.com/css/img_flwr.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        .div3 {
+        border: 1px solid black;
+        height: 120px;
+        width: 150px;
+        background: url(https://www.w3schools.com/css/img_flwr.gif);
+        background-repeat: no-repeat;
+        }
+        #grad {
+        background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        }
+        #grad2 {
+        background-image: radial-gradient( red,orange,yellow,green,blue,indigo,violet);
+        }
+        h1 {
+        text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        }
+        .div4 {
+        width: 300px;
+        height: 100px;
+        padding: 15px;
+        background-color: yellow;
+        box-shadow: 10px 10px 5px grey;
+        }
+        p.test2 {
+        writing-mode: vertical-rl; 
+        }
+        .div5 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s;
+        }
+
+        .div5:hover {
+        width: 300px;
+        }
+        .div6 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;  
+        }
+
+        @keyframes example {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+        }
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext1 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: 105%;
+        }
+        .tooltip .tooltiptext2 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        right: 105%;
+        }
+        .tooltip .tooltiptext3 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+        }
+        .tooltip .tooltiptext4 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px;
+        }
+        .tooltip .tooltiptext5 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        }
+
+        .tooltip .tooltiptext5::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+        }
+        .tooltip .tooltiptext6 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        margin-left: -60px;
+        }
+
+        .tooltip .tooltiptext6::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+        }
+        .tooltip .tooltiptext7 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: 110%;
+        }
+
+        .tooltip .tooltiptext7::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+        }
+        .tooltip .tooltiptext8 {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        right: 110%;
+        }
+
+        .tooltip .tooltiptext8::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent black;
+        }
+
+
+
+        .tooltip:hover .tooltiptext1 {
+        visibility: visible;
+        }
+        .tooltip:hover .tooltiptext2 {
+        visibility: visible;
+        }
+        .tooltip:hover .tooltiptext3 {
+        visibility: visible;
+        }
+        .tooltip:hover .tooltiptext4 {
+        visibility: visible;
+        }
+        .tooltip:hover .tooltiptext5 {
+        visibility: visible;
+        }
+        .tooltip:hover .tooltiptext6 {
+        visibility: visible;
+        }
+        .tooltip:hover .tooltiptext7 {
+        visibility: visible;
+        }
+        .tooltip:hover .tooltiptext8 {
+        visibility: visible;
+        }
+        .fill {object-fit: fill;}
+        .contain {object-fit: contain;}
+        .cover {object-fit: cover;}
+        .scale-down {object-fit: scale-down;}
+        .none {object-fit: none;}
+        .button {
+        background-color: #ecc865;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+
+        .button1 {font-size: 10px;}
+        .button2 {font-size: 12px;}
+        .button3 {font-size: 16px;}
+        .button4 {font-size: 20px;}
+        .button5 {font-size: 24px;}
+
+        .pagination {
+        display: inline-block;
+        }
+
+        .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: 1px solid #ddd;
+        }
+
+        .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+        border: 1px solid #4CAF50;
+        }
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+        .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: DodgerBlue;
+        }
+
+        .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        }
+        </style> 
+</head>
+<body>
+    <p id="rcorners1">라운드 코너 테두리에 배경도 넣기</p>
+    <p id="rcorners2">라운드 코너 테두리 넣기</p>
+    <p id="rcorners3"></p>
+    <p id="rcorners4"></p>
+    <p id="rcorners5"></p>
+    <p id="rcorners6"></p>
+    <p id="borderimg">border-image: url(border.png) 30 round;</p>
+    <p id="borderimg2">border-image: url(border.png) 30 stretch;</p>
+    <h2>background-size: contain:</h2>
+    <div class="div1">
+    </div>
+    <h2>background-size: cover:</h2>
+    <div class="div2">
+    </div>
+    <h2>No background-size defined:</h2>
+    <div class="div3">
+    </div>
+    <div id="grad" style="text-align:center;margin:auto;color:#888888;font-size:40px;font-weight:bold">
+         무지개 선형 그라데이션
+        </div>
+    <div id="grad2" style="text-align:center;margin:auto;color:#888888;font-size:40px;font-weight:bold">
+        무지개 원형 그라데이션
+       </div>
+    <h1>글자에 그림자넣기 여러색으로</h1>
+    <div class="div4"> 박스섀도우</div>
+    <p class="test2">글자 세로로 쓰기</p>
+    <div class="div5"> 마우스를 올려봐 </div>
+    <div class="div6">애니메이션효과</div>
+    <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext1">오른쪽 툴팁</span>
+      </div>
+      <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext2">왼쪽 툴팁</span>
+      </div>
+      <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext3">위쪽 툴팁</span>
+      </div>
+      <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext4">아래쪽 툴팁</span>
+      </div>
+      <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext5">아래쪽 화살표 툴팁</span>
+      </div>
+      <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext6">위쪽 화살표 툴팁</span>
+      </div>
+      <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext7">왼쪽 화살표 툴팁</span>
+      </div>
+      <div class="tooltip">마우스를 올려봐
+        <span class="tooltiptext8">오른쪽 화살표 툴팁</span>
+      </div>
+      <h2>No object-fit:</h2>
+<img src="https://www.w3schools.com/css/paris.jpg" alt="Paris" style="width:200px;height:400px">
+
+<h2>object-fit: fill (this is default):</h2>
+<img class="fill" src="https://www.w3schools.com/css/paris.jpg" alt="Paris" style="width:200px;height:400px">
+
+<h2>object-fit: contain:</h2>
+<img class="contain" src="https://www.w3schools.com/css/paris.jpg" alt="Paris" style="width:200px;height:400px">
+
+<h2>object-fit: cover:</h2>
+<img class="cover" src="https://www.w3schools.com/css/paris.jpg" alt="Paris" style="width:200px;height:400px">
+
+<h2>object-fit: scale-down:</h2>
+<img class="scale-down" src="https://www.w3schools.com/css/paris.jpg" alt="Paris" style="width:200px;height:400px">
+
+<h2>object-fit: none:</h2>
+<img class="none" src="https://www.w3schools.com/css/paris.jpg" alt="Paris" style="width:200px;height:400px">
+
+<button class="button button1">10px</button>
+<button class="button button2">12px</button>
+<button class="button button3">16px</button>
+<button class="button button4">20px</button>
+<button class="button button5">24px</button>
+<h2>페이지 매김</h2>
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+  </div>
+  <h2>flexbox</h2>
+  <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+  </div>
+</body>
+</html>
